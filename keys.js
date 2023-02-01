@@ -1,2 +1,2 @@
 var wikiApikey ="";
-var omdbApikey ="";
+var omdbApikey ="trilogy";
