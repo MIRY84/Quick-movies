@@ -1,0 +1,2 @@
+var wikiApikey ="";
+var omdbApikey ="";
