@@ -1,3 +1,12 @@
 body {
   background-color: azure;
+  
+}
+
+.modal-content {
+  width: 170%;
+}
+.modal-footer, .modal-header, .modal-content {
+  text-align: center;
+  margin: auto;
 }
