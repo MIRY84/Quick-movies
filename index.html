@@ -23,16 +23,17 @@
   <!--added forms for input and button-->
   <div>
   <form id="movie-form">
-      <label for="movie-input">Search for a movie</label>
-      <input type="text" id="movie-input"><br>
+  
+      <input type="text" id="movie-input" placeholder="search movie"><br>
       <!--ADD BUTTON-->
       <button type="button" class="btn btn-primary">Search</button>
-
-      
-
       </form>
    <!--SHOW LIBRARY BUTTON-->
-   <button type="button" class="btn btn-success">SHOW LIBRARY</button>
+
+   <button type="button" id="library" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+    Show library
+  </button>
+
     </div>
 
       <!--adding cards/ basic setup-->
@@ -57,16 +58,7 @@
             
           </div>
         </div>
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-          <div class="card-footer">
-            
-          </div>
-        </div>
+
       </div>
 
 
@@ -87,9 +79,7 @@
 
   <!-- Modal window section -->
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Show library
-  </button>
+
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
