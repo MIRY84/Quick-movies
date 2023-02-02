@@ -5,11 +5,11 @@ console.log("script.js linked")
 const apiKey = "77fef606e4f046370615222d2f17dece";
 
 //need to make this the submit of the form
-const movieName = "The Matrix";
+var movieName = "";
 
 
 //call function to request the data
-function searchMovie() {
+function searchMovie(movieName) {
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieName}`)
         .then(response => {
             if (!response.ok) {
@@ -27,6 +27,22 @@ function searchMovie() {
 }
 
 searchMovie();
+
+
+//use data from the user form submit to search the above API
+
+//variable targetting the button to search
+var userSearch = $(".btn-primary")
+
+//variable targetting the form that the user types into
+
+//WORKING BUTTON - SEARCHES WITH ONE API BUT NOT WORKING WITH OMDB
+userSearch.on("click", function(){
+    var userTypeMovie = $("#movie-input").val();
+    var userResult = userTypeMovie.toString()
+    console.log(userTypeMovie.toString());
+return searchMovie(userResult)}) ; 
+
 
 console.log("script.js linked");
 
