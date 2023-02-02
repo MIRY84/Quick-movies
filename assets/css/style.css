@@ -10,3 +10,15 @@ body {
   text-align: center;
   margin: auto;
 }
+#library {
+  float: right;
+  margin-right: 120px;
+}
+.card-deck {
+  clear: both;
+  margin: 100px;
+}
+#movie-form {
+  display: flex;
+  margin-left: 120px;
+}
