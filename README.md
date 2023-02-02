@@ -1,48 +1,56 @@
-# Quick-movies
-
-## Description
-
-An in-depth paragraph about your project and overview of use.
-
-## Getting Started
-
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
-## Authors
+# <p align="center">**Quick movie app**</p>
 
 
+## Table of Contents
+- [User Story](#user-story)
+- [Technologies Used](#technologies-used)
+- [Static Screenshots](#statci-screenshots)
+- [Collaborators](#collaborators)
+- [LIVE WEBSITE](#live-website)
 
-## Version History
+### DESCRIPTION
 
-* 0.1
-    * Initial Release
+This APP is made for all busy movie enthusiasts who wants to quickly get more detailed information about films from popular media library.
+You will be able to check on posters, full movies plots and descriptions when on busy schedule.
+You will also be able to save your favourite movie to library, where all your chosen films will be stored for your next visit.
 
-## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+### TECHNOLOGIES USED
+HTML / CSS / JavaScript / JQuery
 
-## Acknowledgments
+### 3rd Party APIs used in deployed application:
+
+1. ODMB API: https://developer.nps.gov/api/v1/
+2. THEMOVIEDB : htts://themoviedb.org
+
+### Static Screenshots:
+
+Main Page:
+
+## Screenshot
+
+![screenshot](images/screenshot.png)      <--- when we finish screenshot will go here
+
+
+### COLLABORATORS
+1. [Mirella](https://github.com/MIRY84)
+2. [Mikhai](https://github.com/mihacuo/)
+3. [Nathan](https://github.com/NatCro)
+4. [Mariusz](https://github.com/MariuszWiacek)
+
+## LICENSE
+
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
+
+### EXECUTING PROGRAM
+
+Just click on live website link below.
+
+## LIVE WEBSITE
+
+live Url will go here...
+
+
+Copyright © 2023. All rights are reserved.
+
 
