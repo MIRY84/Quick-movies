@@ -2,7 +2,8 @@
 
 ## Description
 
-Just checking
+A useful website to check on movies plots and description features when on busy schedule.
+You will be able to search the movies' titles and wiki search for important information.
 
 ## Getting Started
 
@@ -33,6 +34,8 @@ command to run if program contains helper info
 
 ## Authors
 
+In incognito mode at the moment to avoid Copywrite unlawful issues.
+
 
 
 ## Version History
@@ -42,7 +45,12 @@ command to run if program contains helper info
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
 
 ## Acknowledgments
+
+
+## Test
+
+live Url will go here...
 
