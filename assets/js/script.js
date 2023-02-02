@@ -1,5 +1,8 @@
 console.log("script.js linked");
 
+// loads local storage, library for modal display
+$(document).ready(loadModalLibrary);
+
 // function gets a seacrhTerm and searched for movies
 function getMoviesInfo(searchTerm) {
   var queryURL = "https://www.omdbapi.com/?t=" + searchTerm + "&apikey=" + omdbApikey + "&plot=full";
@@ -24,10 +27,43 @@ function getMoviesInfo(searchTerm) {
     var plotInfo = $("<p>").text(plot);
     // append all elements to the card
     $("body").append(titleInfo, img, yearInfo, ratingInfo);
-
-
   })
 };
 
-getMoviesInfo("star wars");
-// getMoviesInfo("the up");
+//function to load favorite movies from the local storage.
+function loadModalLibrary(){
+  var savedMovies = JSON.parse(localStorage.getItem("savedMovies")) || []
+  var savedMovies = ["The Matrix", "Titanic", "Turning red", "The Batman"];
+  $(".modal-footer").empty();
+  for (var i = 0; i< savedMovies.length; i++) {
+    var favoriteMovie = $("<button>");
+    
+    favoriteMovie.addClass("btn btn-primary");
+    favoriteMovie.attr("type", "button")
+    favoriteMovie.text(savedMovies[i]);
+    console.log(savedMovies[i]);
+    $(".modal-footer").append(favoriteMovie);
+  }
+}
+
+function saveToModal(movie) {
+  var savedMovies = JSON.parse(localStorage.getItem("savedMovies")) || [];
+  if (! savedMovies.includes(movie)){
+    savedMovies.push(movie);}
+    // we need to remove the last one if it is longer than 10
+    if (savedMovies.length > 10) {
+      savedMovies.shift()
+    }
+    // now save to localstorage
+    localStorage.setItem("savedMovies", JSON.stringify(savedMovies));
+    // finally redraw library
+    loadModalLibrary();
+  }
+
+
+
+
+
+// getMoviesInfo("the matrix");
+// getMoviesInfo("The Up");
+// // getMoviesInfo("the up");
