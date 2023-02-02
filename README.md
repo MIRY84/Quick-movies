@@ -21,7 +21,7 @@ HTML / CSS / JavaScript / JQuery
 ### 3rd Party APIs used in deployed application:
 
 1. ODMB API: https://developer.nps.gov/api/v1/
-2. THEMOVIEDB : htts://themoviedb.org
+2. THEMOVIEDB : https://themoviedb.org
 
 ### Static Screenshots:
 
