@@ -2,9 +2,7 @@
 //console.log("script.js linked")
 
 //links to the keys.js file with users api key
-// just removed the var keys and pushed in the keys.js
-//git const apiKey = "77fef606e4f046370615222d2f17dece";
-//var omdbApikey = "trilogy";
+
 
 
 
