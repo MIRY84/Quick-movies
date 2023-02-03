@@ -35,18 +35,55 @@ function ajaxSearchMovie(movieName) {
     method: "GET"
   }).then(function(response){
     r=response;
-    var maxResultsToDisplay = 1;
+    var maxResultsToDisplay = 5;
+    $("#results").empty();
     for (var i = 0; i< maxResultsToDisplay; i++){
       console.log("i: " + i);
       var title = response.results[i].original_title;
       var year = response.results[i].release_date;
-      getMoviesInfo(title); //will get a poster
+      
       console.log("-------");
       console.log(title, year);
 
-      $("#movie-title1").text("Movie Title: " +title);
-      $("#movie-year").text("Released: " +year);
+      var uniqueImageID = "image-" + i;
+      var uniqueplotID = "plot-" + i;
+      var uniqueRatingID = "rating-" + i;
 
+
+      $(".movie-title1").text("Movie Title: " +title);
+      $(".movie-year").text("Released: " +year);
+
+      var cardDeck = $("<div>").addClass("card-deck");
+      var card1 = $("<div>").addClass("card");
+      var card1Title = $("<h5>").addClass("card-title").text("Movie Title: " +title);
+      var cardImage = $("<img>").addClass("card-img-top");
+      cardImage.attr("alt", "Card image cap");
+      cardImage.attr("id", uniqueImageID);
+      var card1body = $("<div>").addClass("card-body");
+      var card1Rating = $("<p>").addClass("card-text");
+      card1Rating.attr("id", uniqueRatingID)
+      var card1Year = $("<p>").addClass("card-text").text("Released:" + year);
+      var card1footer = $("<div>").addClass("card-footer");
+
+      card1body.append(card1Rating, card1Year);
+      card1.append(card1Title, cardImage, card1body, card1footer);
+
+      var card2 = $("<div>").addClass("card");
+      var card2Title = $("<h5>").addClass("card-title").text("Movie Plot:");
+      var card2Plot = $("<p>").addClass("movie-plot").text("LOREM IPSUM");
+      card2Plot.attr("id", uniqueplotID);
+      var card2body = $("<div>").addClass("card-body");
+      var cardButton = $("<button>").addClass("btn btn-warning").text("Save to my library");
+      cardButton.attr("name", title);
+      var card2footer = $("<div>").addClass("card-footer");
+
+      card2body.append(cardButton);
+      card2.append(card2Title, card2Plot, card2body, card2footer);
+
+      cardDeck.append(card1, card2);
+      $("#results").append(cardDeck);
+
+      getMoviesInfo(title, i); //will get a poster and a plot
     }
   });
 };
@@ -75,7 +112,7 @@ console.log("script.js linked");
 $(document).ready(loadModalLibrary);
 
 // function gets a seacrhTerm and searched for movies
-function getMoviesInfo(searchTerm) {
+function getMoviesInfo(searchTerm, i) {
   var queryURL = "https://www.omdbapi.com/?t=" + searchTerm + "&apikey=" + omdbApikey + "&plot=full";
   $.ajax({
     url:queryURL,
@@ -89,16 +126,15 @@ function getMoviesInfo(searchTerm) {
     var title = response.Title;
     var plot = response.Plot;
     console.log(poster, year, rating);
-    // create image, and 2 x paragraphs
-    var img = $("<img>");
-    img.attr("src", poster);
-    var yearInfo = $("<p>").text(year);
-    var ratingInfo = $("<p>").text(rating);
-    var titleInfo = $("<p>").text(title);
-    var plotInfo = $("<p>").text(plot);
-    $("#poster-img").attr("src", poster);
-    $("#movie-plot").text(plot)
-    $("#movie-rating").text("Rating: " + rating)
+    
+    var uniqueImageID = "image-" + i;
+    var uniqueplotID = "plot-" + i;
+    var uniqueRatingID = "rating-" + i;
+
+    $("#" + uniqueImageID).attr("src", poster);
+    $("#" + uniqueplotID).text(plot);
+
+    $("#" + uniqueRatingID).text("Rating: " + rating)
     // append all elements to the card
     // $("body").append(titleInfo, img, yearInfo, ratingInfo);
   })
