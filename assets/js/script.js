@@ -3,9 +3,8 @@
 
 //links to the keys.js file with users api key
 const apiKey = "77fef606e4f046370615222d2f17dece";
+var omdbApikey = "trilogy";
 
-//need to make this the submit of the form
-var movieName = "";
 
 
 //call function to request the data
@@ -19,29 +18,56 @@ function searchMovie(movieName) {
             return response.json();
         })
         .then(data => {
-            console.log(data);
+            //console.log(data);
+            return data;
         })
         .catch(error => {
             console.error(error);
         });
 }
 
-searchMovie();
+var r = "";
 
+function ajaxSearchMovie(movieName) {
+
+  var queryURL = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieName}`;
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response){
+    r=response;
+    var maxResultsToDisplay = 1;
+    for (var i = 0; i< maxResultsToDisplay; i++){
+      console.log("i: " + i);
+      var title = response.results[i].original_title;
+      var year = response.results[i].release_date;
+      getMoviesInfo(title); //will get a poster
+      console.log("-------");
+      console.log(title, year);
+
+      $("#movie-title1").text("Movie Title: " +title);
+      $("#movie-year").text("Released: " +year);
+
+    }
+  });
+};
 
 //use data from the user form submit to search the above API
 
 //variable targetting the button to search
-var userSearch = $(".btn-primary")
+var userSearch = $("#movie-search");
 
 //variable targetting the form that the user types into
 
 //WORKING BUTTON - SEARCHES WITH ONE API BUT NOT WORKING WITH OMDB
-userSearch.on("click", function(){
+userSearch.on("click", function(event){
+    event.preventDefault();
     var userTypeMovie = $("#movie-input").val();
     var userResult = userTypeMovie.toString()
     console.log(userTypeMovie.toString());
-return searchMovie(userResult)}) ; 
+    ajaxSearchMovie(userResult);
+    // console.log(result) 
+});
 
 
 console.log("script.js linked");
@@ -71,8 +97,11 @@ function getMoviesInfo(searchTerm) {
     var ratingInfo = $("<p>").text(rating);
     var titleInfo = $("<p>").text(title);
     var plotInfo = $("<p>").text(plot);
+    $("#poster-img").attr("src", poster);
+    $("#movie-plot").text(plot)
+    $("#movie-rating").text("Rating: " + rating)
     // append all elements to the card
-    $("body").append(titleInfo, img, yearInfo, ratingInfo);
+    // $("body").append(titleInfo, img, yearInfo, ratingInfo);
   })
 };
 
@@ -87,7 +116,7 @@ function loadModalLibrary(){
     favoriteMovie.addClass("btn btn-primary");
     favoriteMovie.attr("type", "button")
     favoriteMovie.text(savedMovies[i]);
-    console.log(savedMovies[i]);
+    // console.log(savedMovies[i]);
     $(".modal-footer").append(favoriteMovie);
   }
 }
