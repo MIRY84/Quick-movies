@@ -44,7 +44,7 @@ function ajaxSearchMovie(movieName) {
       console.log("-------");
       console.log(title, year);
 
-      $("#movie-title1").text("Movie Title: " +title);
+      $("#movie-title1").text(title);
       $("#movie-year").text("Released: " +year);
 
     }
