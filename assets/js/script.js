@@ -1,5 +1,5 @@
 
-console.log("script.js linked")
+//console.log("script.js linked")
 
 //links to the keys.js file with users api key
 const apiKey = "77fef606e4f046370615222d2f17dece";
