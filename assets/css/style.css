@@ -1,7 +1,13 @@
 body {
   background-color: rgb(45, 48, 48);
+  background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
+  background-image: -moz-linear-gradient();
+  background-repeat: no-repeat;
+  background-size: cover;
   
 }
+
+
 
 .modal-content {
   width: 170%;
@@ -32,6 +38,9 @@ body {
 }
 
 .jumbotron, .card {
+  background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: rgb(45, 48, 48);
   border-style: ridge;
   border-width: 1rem;
