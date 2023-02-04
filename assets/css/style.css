@@ -27,21 +27,23 @@ body {
   text-align: center;
   color: rgb(179, 15, 15);
   font-family: Arial, sans-serif;
-  font-size: 120px;
+  font-size: 100px;
 
 }
 
-.jumbotron, #card2, #card1{
+.jumbotron, .card {
   background-color: rgb(45, 48, 48);
   border-style: ridge;
   border-width: 1rem;
   border-color: rgb(179, 15, 15);
+  font-style:oblique;
+
   
 }
 
 .lead{
   color: rgb(179, 15, 15);
-  font-style: italic;
+  font-style:oblique;
   font-size: 35px;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -55,6 +57,21 @@ body {
   text-align: center;
   color: rgb(179, 15, 15);
 }
+ 
+.card-img-top {
+  
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 450px;
+  height: 300px;
+}
+
+ div .card {
+  
+  padding: 5px;
+  width: 400px;
+  height: 600px;
+ }
 
 .card-title{
   font-size: 50px;
@@ -65,5 +82,13 @@ body {
 }
 
 .card-text{
-  font-size: 60px;
+  font-size: 30px;
+  color: white;
+  padding: auto;
+}
+
+h4 {
+  text-align: center;
+  color: white;
+  padding: auto;
 }

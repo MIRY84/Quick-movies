@@ -38,7 +38,7 @@ $.ajax({
   var maxResultsToDisplay = 5;
   $("#results").empty();
   for (var i = 0; i< maxResultsToDisplay; i++){
-    console.log("i: " + i);
+    console.log("i " + i);
     var title = response.results[i].original_title;
     var year = response.results[i].release_date;
     
@@ -55,7 +55,7 @@ $.ajax({
 
     var cardDeck = $("<div>").addClass("card-deck");
     var card1 = $("<div>").addClass("card");
-    var card1Title = $("<h5>").addClass("card-title").text("Movie Title: " +title);
+    var card1Title = $("<h5>").addClass("card-title").text(title);
     var cardImage = $("<img>").addClass("card-img-top");
     cardImage.attr("alt", "Card image cap");
     cardImage.attr("id", uniqueImageID);
@@ -69,8 +69,8 @@ $.ajax({
     card1.append(card1Title, cardImage, card1body, card1footer);
 
     var card2 = $("<div>").addClass("card");
-    var card2Title = $("<h5>").addClass("card-title").text("Movie Plot:");
-    var card2Plot = $("<p>").addClass("movie-plot").text("LOREM IPSUM");
+    var card2Title = $("<h5>").addClass("card-title").text("Plot");
+    var card2Plot = $("<h4>").addClass("movie-plot").text("LOREM IPSUM");
     card2Plot.attr("id", uniqueplotID);
     var card2body = $("<div>").addClass("card-body");
 
