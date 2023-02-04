@@ -40,7 +40,7 @@ $.ajax({
   for (var i = 0; i< maxResultsToDisplay; i++){
     console.log("i " + i);
     var title = response.results[i].original_title;
-    var year = response.results[i].release_date;
+    var year = response.results[i].release_date.substring(0,4);
     
     console.log("-------");
     console.log(title, year);
