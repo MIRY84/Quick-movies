@@ -73,8 +73,19 @@ $.ajax({
     var card2Plot = $("<p>").addClass("movie-plot").text("LOREM IPSUM");
     card2Plot.attr("id", uniqueplotID);
     var card2body = $("<div>").addClass("card-body");
+
+
+    //    SAVE TO MY LIBRARY BUTTON 
+
     var cardButton = $("<button>").addClass("btn btn-warning").text("Save to my library");
     cardButton.attr("name", title);
+    cardButton.on("click", function () {
+      var clickedBtnID = $(this).attr("name");
+      saveToModal(clickedBtnID);
+   });
+  
+
+
     var card2footer = $("<div>").addClass("card-footer");
 
     card2body.append(cardButton);
@@ -143,18 +154,61 @@ $.ajax({
 //function to load favorite movies from the local storage.
 function loadModalLibrary(){
 var savedMovies = JSON.parse(localStorage.getItem("savedMovies")) || []
-var savedMovies = ["The Matrix", "Titanic", "Turning red", "The Batman"];
+// var savedMovies = ["The Matrix", "Titanic", "Turning red", "The Batman"];
 $(".modal-footer").empty();
+$(".modal-body2").empty();
 for (var i = 0; i< savedMovies.length; i++) {
   var favoriteMovie = $("<button>");
+  favoriteMovie.addClass("btn-lg btn-outline-success");
+  favoriteMovie.attr("type", "button").css("width", "60%")
+  favoriteMovie.text(savedMovies[i])
+  favoriteMovie.attr("name", savedMovies[i])
+  favoriteMovie.on('click', function(){
+    var newSavedmovies = $(this).attr("name")
+    console.log(newSavedmovies)
+    ajaxSearchMovie(newSavedmovies);
+    
+    
+  });
   
-  favoriteMovie.addClass("btn btn-primary");
-  favoriteMovie.attr("type", "button")
-  favoriteMovie.text(savedMovies[i]);
   // console.log(savedMovies[i]);
-  $(".modal-footer").append(favoriteMovie);
+  $(".modal-body2").prepend(favoriteMovie);
+  
 }
+
+
+// RESET BUTTON
+
+var clearBtn = $("<button>");
+  clearBtn.addClass("btn btn-secondary").attr("type", "button").text("Clear Favourites")
+  clearBtn.on('click', function(){
+  alert("clicked again")
+  localStorage.clear();
+  loadModalLibrary()
+});
+
+// SAVE CHANGES BUTTON
+
+var saveChngBtn = $("<button>");
+saveChngBtn.addClass("btn btn-danger").attr("type", "button").text("Save Changes").css("position: absolute")
+saveChngBtn.on('click', function(){
+  alert("clicked again")
+  localStorage.setItem()
+  loadModalLibrary()
+});
+
+
+//appending buttons
+$(".modal-footer").append(saveChngBtn)
+$(".modal-footer").append(clearBtn);
+
 }
+
+
+
+
+
+
 
 function saveToModal(movie) {
 var savedMovies = JSON.parse(localStorage.getItem("savedMovies")) || [];
