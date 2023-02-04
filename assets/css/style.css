@@ -78,6 +78,7 @@ body {
 }
 
 #movie-plot{
+  overflow: hidden;
   font-size: 30px;
 }
 
