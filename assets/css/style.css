@@ -82,6 +82,7 @@ body {
 }
 
 .card-text{
+  overflow: hidden;
   text-align: justify;
   font-size: 30px;
   color: white;
@@ -89,6 +90,7 @@ body {
 }
 
 h4 {
+  overflow: hidden;
   text-align: center;
   color: white;
   padding: auto;
