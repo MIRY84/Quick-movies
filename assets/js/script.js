@@ -104,17 +104,27 @@ $.ajax({
 //variable targetting the button to search
 var userSearch = $("#movie-search");
 
-//variable targetting the form that the user types into
+// SEARCH BUTTON, triggers also when button "ENTER" pressed
 
-//WORKING BUTTON - SEARCHES WITH ONE API BUT NOT WORKING WITH OMDB
+$('#movie-input').keypress(function(event){
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+  if(keycode == '13'){
+    event.preventDefault();
+    var userTypeMovie = $("#movie-input").val();
+    var userResult = userTypeMovie.toString()
+    ajaxSearchMovie(userResult); 
+  }
+});
+
+
 userSearch.on("click", function(event){
   event.preventDefault();
   var userTypeMovie = $("#movie-input").val();
   var userResult = userTypeMovie.toString()
-  console.log(userTypeMovie.toString());
   ajaxSearchMovie(userResult);
   // console.log(result) 
 });
+
 
 
 console.log("script.js linked");
@@ -182,7 +192,6 @@ for (var i = 0; i< savedMovies.length; i++) {
 var clearBtn = $("<button>");
   clearBtn.addClass("btn btn-secondary").attr("type", "button").text("Clear Favourites")
   clearBtn.on('click', function(){
-  alert("clicked again")
   localStorage.clear();
   loadModalLibrary()
 });
@@ -192,22 +201,15 @@ var clearBtn = $("<button>");
 var saveChngBtn = $("<button>");
 saveChngBtn.addClass("btn btn-danger").attr("type", "button").text("Save Changes").css("position: absolute")
 saveChngBtn.on('click', function(){
-  alert("clicked again")
   localStorage.setItem()
   loadModalLibrary()
 });
 
 
-//appending buttons
+//appending both buttons
 $(".modal-footer").append(saveChngBtn)
 $(".modal-footer").append(clearBtn);
-
 }
-
-
-
-
-
 
 
 function saveToModal(movie) {
