@@ -82,6 +82,7 @@ body {
 }
 
 .card-text{
+  text-align: justify;
   font-size: 30px;
   color: white;
   padding: auto;
