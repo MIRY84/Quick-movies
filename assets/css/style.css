@@ -30,10 +30,15 @@ body {
 }
 
 .display-4{
-  text-align: center;
-  color: rgb(179, 15, 15);
-  font-family: Arial, sans-serif;
-  font-size: 100px;
+  
+  background: #121FCF;
+background: -webkit-radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
+background: -moz-radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
+background: radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  font-family:fantasy;
+  font-size: 160px;
 
 }
 
@@ -44,9 +49,11 @@ body {
   background-size: cover;
   
   border-style: ridge;
-  border-width: 1rem;
-  border-color: rgb(179, 15, 15);
+  border-width: 0.2rem;
+  border-radius: 0.5cm;
+  border-color:rgb(245, 97, 97);
   font-style:oblique;
+  
 
   
 }
@@ -58,11 +65,15 @@ body {
 }
 
 .lead{
-  color: rgb(179, 15, 15);
-  font-style:oblique;
-  font-size: 35px;
-  font-family: Arial, sans-serif;
   text-align: center;
+  background: #121FCF;
+  background: -webkit-radial-gradient(circle farthest-corner at top center, #ffffff 21%, #CF1512 73%);
+  background: -moz-radial-gradient(circle farthest-corner at top center, #ffffff 21%, #CF1512 73%);
+  background: radial-gradient(circle farthest-corner at top center, #eeeff0 21%, #CF1512 73%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family:fantasy;
+  font-size: 40px;
 }
  
 #card2, #card1{
@@ -73,18 +84,13 @@ body {
 
 .card-title, .card-text, #movie-plot{
   text-align: center;
-  color: rgb(179, 15, 15);
+  color: rgb(243, 0, 0);
 }
  
-.card-img-top {
-  display: block;
-  
-  
-  max-width: 100%;
- 
-}
+
 
  div .card {
+  visibility: hidden;
   padding: 0 1em;
   max-width: 60rem;
  }
@@ -93,22 +99,56 @@ body {
   font-size: 50px;
 }
 
-#movie-plot{
-  overflow: hidden;
-  font-size: 30px;
-}
 
-.card-text{
+.card-text{    /* text of movie info etc*/
   overflow: hidden;
   text-align: justify;
-  font-size: 30px;
-  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
   padding: auto;
+  width: 100%;
+  
 }
 
-h4 {
+h4 {   /* plot txt*/
   overflow: hidden;
   text-align: center;
-  color: white;
-  padding: auto;
+  color: rgb(255, 255, 255);
+  padding: auto;}
+
+  h5 {
+
+    font-family:fantasy;
+  }
+  
+
+
+  
+/* hover effect */
+
+
+.card-body{                 /*body of hover card*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right:-250%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+    color: #fff;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.75s;
 }
+
+.card:hover .card-body{
+    right: 0;
+}
+
+
+
+

@@ -23,11 +23,14 @@ function searchMovie(movieName) {
       .catch(error => {
           console.error(error);
       });
+      
 }
 
 var r = "";
 
 function ajaxSearchMovie(movieName) {
+
+
 
 var queryURL = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieName}`;
 $.ajax({
@@ -75,6 +78,10 @@ $.ajax({
     var card2body = $("<div>").addClass("card-body");
 
 
+    // Makes cards visible after run function
+    $(".card").css("visibility", "visible");
+
+
     //    SAVE TO MY LIBRARY BUTTON 
 
     var cardButton = $("<button>").addClass("btn btn-warning").text("Save to my library");
@@ -82,6 +89,8 @@ $.ajax({
     cardButton.on("click", function () {
       var clickedBtnID = $(this).attr("name");
       saveToModal(clickedBtnID);
+
+      
    });
   
 
@@ -118,11 +127,11 @@ $('#movie-input').keypress(function(event){
 
 
 userSearch.on("click", function(event){
-  event.preventDefault();
+   event.preventDefault();
   var userTypeMovie = $("#movie-input").val();
   var userResult = userTypeMovie.toString()
   ajaxSearchMovie(userResult);
-  // console.log(result) 
+ 
 });
 
 
