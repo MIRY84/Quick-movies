@@ -36,6 +36,7 @@ background: -webkit-radial-gradient(circle farthest-corner at top center, #121FC
 background: -moz-radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
 background: radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
 -webkit-background-clip: text;
+background-clip: text;
 -webkit-text-fill-color: transparent;
   font-family:fantasy;
   font-size: 160px;
