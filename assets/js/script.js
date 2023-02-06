@@ -80,6 +80,7 @@ $.ajax({
 
     // Makes cards visible after run function
     $(".card").css("visibility", "visible");
+    $("body").css("overflow-y", "visible");
 
 
     //    SAVE TO MY LIBRARY BUTTON 
