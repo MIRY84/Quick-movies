@@ -40,7 +40,7 @@ background: radial-gradient(circle farthest-corner at top center, #121FCF 21%, #
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
   font-family:fantasy;
-  font-size: 5rem;
+  font-size: 40px;
   text-align: center;
 
 }
