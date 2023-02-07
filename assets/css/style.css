@@ -4,7 +4,7 @@ body {
   background-image: -moz-linear-gradient();
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -25,6 +25,8 @@ body {
 #library {
   float: right;
   margin-right: 120px;
+  position:relative;
+  top: -20px;
 }
 
 .card-deck {
@@ -35,6 +37,7 @@ body {
 #movie-form {
   display: flex;
   margin-left: 120px;
+  padding-top: 50px;
 }
 
 .display-4 {
@@ -49,8 +52,11 @@ body {
   font-family: fantasy;
   font-size: 100px;
   text-align: center;
+  
 
 }
+
+
 
 .jumbotron,
 .card {
@@ -64,7 +70,7 @@ body {
   border-radius: 0.5cm;
   border-color: rgb(245, 97, 97);
   font-style: oblique;
-
+  box-shadow: 5px 8px 8px azure;
 
 
 }
@@ -73,6 +79,7 @@ body {
   padding: 0 1em;
   max-width: 60rem;
   margin: 0 auto;
+
 }
 
 .lead {
@@ -176,7 +183,28 @@ h5 {
 }
 #exampleModal{
   margin: auto;
+
 }
 #cross{
   color: white;
+}
+.modal-dialog {
+  border: 3px dashed lightblue;
+  box-shadow: 5px 8px 8px lightblue;
+}
+#movie-search,
+#movie-input,
+#library {
+  box-shadow: 4px 4px 4px rgb(97, 105, 143);
+  scale: 200%;
+}
+#movie-input {
+  padding: 5px;
+}
+
+.shadow-class {
+  box-shadow: 5px 8px 8px rgb(77, 94, 170);
+}
+.special-space {
+  margin-bottom: 10px;
 }
