@@ -1,5 +1,5 @@
 body {
-  
+
   background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
   background-image: -moz-linear-gradient();
   background-repeat: no-repeat;
@@ -14,52 +14,59 @@ body {
 .modal-content {
   width: 170%;
 }
-.modal-footer, .modal-header, .modal-content {
+
+.modal-footer,
+.modal-header,
+.modal-content {
   text-align: center;
   margin: auto;
 }
+
 #library {
   float: right;
   margin-right: 120px;
 }
+
 .card-deck {
   clear: both;
   margin: 100px;
 }
+
 #movie-form {
   display: flex;
   margin-left: 120px;
 }
 
-.display-4{
-  
+.display-4 {
+
   background: #121FCF;
-background: -webkit-radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
-background: -moz-radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
-background: radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-  font-family:fantasy;
-  font-size: 40px;
+  background: -webkit-radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
+  background: -moz-radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
+  background: radial-gradient(circle farthest-corner at top center, #121FCF 21%, #CF1512 73%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: fantasy;
+  font-size: 100px;
   text-align: center;
 
 }
 
-.jumbotron, .card {
+.jumbotron,
+.card {
   min-height: 300px;
   background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   border-style: ridge;
   border-width: 0.2rem;
   border-radius: 0.5cm;
-  border-color:rgb(245, 97, 97);
-  font-style:oblique;
-  
+  border-color: rgb(245, 97, 97);
+  font-style: oblique;
 
-  
+
+
 }
 
 .container {
@@ -68,7 +75,7 @@ background-clip: text;
   margin: 0 auto;
 }
 
-.lead{
+.lead {
   text-align: center;
   background: #121FCF;
   background: -webkit-radial-gradient(circle farthest-corner at top center, #ffffff 21%, #CF1512 73%);
@@ -77,35 +84,39 @@ background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family:fantasy;
+  font-family: fantasy;
   font-size: 40px;
 }
- 
-#card2, #card1{
-  
+
+#card2,
+#card1 {
+
   padding: 0 1em;
   max-width: 60rem;
 }
 
-.card-title, .card-text, #movie-plot{
+.card-title,
+.card-text,
+#movie-plot {
   text-align: center;
   color: rgb(243, 0, 0);
 }
- 
 
 
- div .card {
+
+div .card {
   visibility: hidden;
   padding: 0 1em;
   max-width: 60rem;
- }
+}
 
-.card-title{
+.card-title {
   font-size: 50px;
 }
 
 
-.card-text{    /* text of movie info etc*/
+.card-text {
+  /* text of movie info etc*/
   overflow: hidden;
   text-align: justify;
   font-size: 25px;
@@ -113,45 +124,48 @@ background-clip: text;
   color: rgb(255, 255, 255);
   padding: auto;
   width: 100%;
-  
+
 }
 
-h4 {   /* plot txt*/
+h4 {
+  /* plot txt*/
   overflow: hidden;
   text-align: center;
   color: rgb(255, 255, 255);
-  padding: auto;}
+  padding: auto;
+}
 
-  h5 {
+h5 {
 
-    font-family:fantasy;
-  }
-  
+  font-family: fantasy;
+}
 
 
-  
+
+
 /* hover effect */
 
 
-.card-body{                 /*body of hover card*/
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right:-250%;
-    position: absolute;
-    background: #1f3d4738;
-    backdrop-filter: blur(3px);
-    border-radius: 15px;
-    color: #fff;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 0.75s;
+.card-body {
+  /*body of hover card*/
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -250%;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(3px);
+  border-radius: 15px;
+  color: #fff;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.75s;
 }
 
-.card:hover .card-body{
-    right: 0;
+.card:hover .card-body {
+  right: 0;
 }
 
 /* .modal-content {
@@ -160,4 +174,3 @@ h4 {   /* plot txt*/
   background-size: cover;
   color: white;
 } */
-
