@@ -187,6 +187,7 @@ for (var i = 0; i< savedMovies.length; i++) {
     var newSavedmovies = $(this).attr("name")
     console.log(newSavedmovies)
     ajaxSearchMovie(newSavedmovies);
+    $("#cross").click()
     
     
   });
