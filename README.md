@@ -47,8 +47,7 @@ This project is licensed under the [MIT] License - see the LICENSE.md file for d
 Just click on live website link below.
 
 ## LIVE WEBSITE
-
-live Url will go here...
+https://miry84.github.io/Quick-movies/
 
 
 Copyright © 2023. All rights are reserved.
