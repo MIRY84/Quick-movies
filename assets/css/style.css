@@ -40,7 +40,8 @@ background: radial-gradient(circle farthest-corner at top center, #121FCF 21%, #
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
   font-family:fantasy;
-  font-size: 160px;
+  font-size: 5rem;
+  text-align: center;
 
 }
 
@@ -151,6 +152,10 @@ h4 {   /* plot txt*/
     right: 0;
 }
 
-
-
+/* .modal-content {
+  background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+} */
 
