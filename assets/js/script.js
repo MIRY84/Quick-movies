@@ -179,7 +179,7 @@ $(".modal-footer").empty();
 $(".modal-body2").empty();
 for (var i = 0; i< savedMovies.length; i++) {
   var favoriteMovie = $("<button>");
-  favoriteMovie.addClass("btn-lg btn-outline-success");
+  favoriteMovie.addClass("btn-lg shadow-class btn-success special-space");
   favoriteMovie.attr("type", "button").css("width", "60%")
   favoriteMovie.text(savedMovies[i])
   favoriteMovie.attr("name", savedMovies[i])
@@ -201,7 +201,7 @@ for (var i = 0; i< savedMovies.length; i++) {
 // RESET BUTTON
 
 var clearBtn = $("<button>");
-  clearBtn.addClass("btn btn-secondary").attr("type", "button").text("Clear Favourites")
+  clearBtn.addClass("btn btn-secondary shadow-class").attr("type", "button").text("Clear Favourites")
   clearBtn.on('click', function(){
   localStorage.clear();
   loadModalLibrary()
@@ -210,7 +210,7 @@ var clearBtn = $("<button>");
 // SAVE CHANGES BUTTON
 
 var saveChngBtn = $("<button>");
-saveChngBtn.addClass("btn btn-danger").attr("type", "button").text("Save Changes").css("position: absolute")
+saveChngBtn.addClass("btn btn-danger shadow-class").attr("type", "button").text("Save Changes").css("position: absolute")
 saveChngBtn.on('click', function(){
   localStorage.setItem()
   loadModalLibrary()
