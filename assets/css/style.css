@@ -229,3 +229,14 @@ h5 {
 .special-space {
   margin-bottom: 10px;
 }
+
+
+
+@media (max-width: 991.98px) {  
+  #movie-search,
+#movie-input,
+#library {
+  box-shadow: 4px 4px 4px rgb(97, 105, 143);
+  scale: 100%;
+}
+}
