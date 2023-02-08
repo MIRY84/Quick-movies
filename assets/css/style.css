@@ -2,7 +2,7 @@ body {
 
   background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
   background-image: -moz-linear-gradient();
-  background-repeat: no-repeat;
+  
   background-size: cover;
   
   overflow-x: hidden;
@@ -23,10 +23,13 @@ body {
 }
 
 #library {
+  display: flex;
   float: right;
-  margin-right: 120px;
+  margin-right: 100px;
   position:relative;
-  top: -20px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  
 }
 
 .card-deck {
@@ -35,9 +38,13 @@ body {
 }
 
 #movie-form {
+  align-items: center;
   display: flex;
-  margin-left: 120px;
-  padding-top: 50px;
+  float: left;
+  margin-left: 80px;
+  padding: 50px;
+  margin-top: 5px;
+  margin-right: 30px;
 }
 
 .display-4 {
@@ -56,18 +63,25 @@ body {
 
 }
 
+.div .container{
+  display: flex;
+}
+
 
 
 .jumbotron,
 .card {
-  min-height: 300px;
+  display: flex;
+  
+ 
+ 
   background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   border-style: ridge;
-  border-width: 0.2rem;
-  border-radius: 0.5cm;
+  border-width: 0.6rem;
+  border-radius: 0.8cm;
   border-color: rgb(245, 97, 97);
   font-style: oblique;
   box-shadow: 5px 8px 8px azure;
@@ -76,13 +90,16 @@ body {
 }
 
 .container {
-  padding: 0 1em;
+  
+  align-items: center;
   max-width: 60rem;
-  margin: 0 auto;
+  max-height: 30rem;
+  
 
 }
 
 .lead {
+  align-items: center;
   text-align: center;
   background: #121FCF;
   background: -webkit-radial-gradient(circle farthest-corner at top center, #ffffff 21%, #CF1512 73%);
@@ -97,14 +114,18 @@ body {
 
 #card2,
 #card1 {
-
-  padding: 0 1em;
-  max-width: 60rem;
+ 
+  margin-top: 50px;
+  padding: 30px;
+  max-width: 600px;
+ 
+ 
 }
 
 .card-title,
 .card-text,
 #movie-plot {
+  align-content: center;
   text-align: center;
   color: rgb(243, 0, 0);
 }
