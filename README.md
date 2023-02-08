@@ -2,6 +2,7 @@
 
 
 ## Table of Contents
+
 - [User Story](#user-story)
 - [Technologies Used](#technologies-used)
 - [Static Screenshots](#statci-screenshots)
@@ -16,6 +17,7 @@ You will also be able to save your favourite movie to library, where all your ch
 
 
 ### TECHNOLOGIES USED
+
 HTML / CSS / JavaScript / JQuery
 
 ### 3rd Party APIs used in deployed application:
@@ -23,16 +25,13 @@ HTML / CSS / JavaScript / JQuery
 1. ODMB API: https://developer.nps.gov/api/v1/
 2. THEMOVIEDB : https://themoviedb.org
 
-### Static Screenshots:
-
-Main Page:
-
 ## Screenshot
 
 ![screenshot](images/screenshot.png)      <--- when we finish screenshot will go here
 
 
 ### COLLABORATORS
+
 1. [Mirella](https://github.com/MIRY84)
 2. [Mikhai](https://github.com/mihacuo/)
 3. [Nathan](https://github.com/NatCro)
