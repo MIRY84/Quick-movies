@@ -2,9 +2,9 @@ body {
 
   background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
   background-image: -moz-linear-gradient();
-  
+
   background-size: cover;
-  
+
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -26,10 +26,10 @@ body {
   display: flex;
   float: right;
   margin-right: 100px;
-  position:relative;
+  position: relative;
   margin-top: 50px;
   margin-bottom: 40px;
-  
+
 }
 
 .card-deck {
@@ -59,11 +59,11 @@ body {
   font-family: fantasy;
   font-size: 100px;
   text-align: center;
-  
+
 
 }
 
-.div .container{
+.div .container {
   display: flex;
 }
 
@@ -72,9 +72,9 @@ body {
 .jumbotron,
 .card {
   display: flex;
-  
- 
- 
+
+
+
   background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,11 +90,11 @@ body {
 }
 
 .container {
-  
+
   align-items: center;
   max-width: 60rem;
   max-height: 30rem;
-  
+
 
 }
 
@@ -114,12 +114,12 @@ body {
 
 #card2,
 #card1 {
- 
+
   margin-top: 50px;
   padding: 30px;
   max-width: 600px;
- 
- 
+
+
 }
 
 .card-title,
@@ -195,6 +195,7 @@ h5 {
 .card:hover .card-body {
   right: 0;
 }
+
 .modal-dialog,
 .modal-content {
   background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
@@ -202,23 +203,28 @@ h5 {
   background-size: cover;
   color: white;
 }
-#exampleModal{
+
+#exampleModal {
   margin: auto;
 
 }
-#cross{
+
+#cross {
   color: white;
 }
+
 .modal-dialog {
   border: 3px dashed lightblue;
   box-shadow: 5px 8px 8px lightblue;
 }
+
 #movie-search,
 #movie-input,
 #library {
   box-shadow: 4px 4px 4px rgb(97, 105, 143);
   scale: 200%;
 }
+
 #movie-input {
   padding: 5px;
 }
@@ -226,17 +232,24 @@ h5 {
 .shadow-class {
   box-shadow: 5px 8px 8px rgb(77, 94, 170);
 }
+
 .special-space {
   margin-bottom: 10px;
 }
 
 
 
-@media (max-width: 991.98px) {  
+@media (max-width: 991.98px) {
+
   #movie-search,
-#movie-input,
-#library {
-  box-shadow: 4px 4px 4px rgb(97, 105, 143);
-  scale: 100%;
-}
+  #movie-input,
+  #library {
+    box-shadow: 4px 4px 4px rgb(97, 105, 143);
+    scale: 100%;
+
+  }
+
+  .display-4 {
+    font-size: 80px;
+  }
 }
