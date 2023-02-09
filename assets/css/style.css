@@ -1,5 +1,5 @@
 body {
-
+  font-family: Arial, Helvetica, sans-serif;
   background-image: url("https://wallpapercave.com/dwp1x/p4iaEa4.jpg");
   background-image: -moz-linear-gradient();
   
@@ -108,7 +108,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: fantasy;
+ 
   font-size: 40px;
 }
 
@@ -163,10 +163,7 @@ h4 {
   padding: auto;
 }
 
-h5 {
 
-  font-family: fantasy;
-}
 
 
 
