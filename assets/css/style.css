@@ -182,7 +182,7 @@ h4 {
   backdrop-filter: blur(3px);
   border-radius: 15px;
   color: #fff;
-  padding: 0px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
