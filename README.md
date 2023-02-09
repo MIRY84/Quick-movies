@@ -5,7 +5,7 @@
 
 - [User Story](#user-story)
 - [Technologies Used](#technologies-used)
-- [Static Screenshots](#statci-screenshots)
+- [Static Screenshots](#screenshot)
 - [Collaborators](#collaborators)
 - [LIVE WEBSITE](#live-website)
 
@@ -27,7 +27,7 @@ HTML / CSS / JavaScript / JQuery
 
 ## Screenshot
 
-![screenshot](images/screenshot.png)      <--- when we finish screenshot will go here
+![screenshot](images/screenshot.png)
 
 
 ### COLLABORATORS
