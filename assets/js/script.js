@@ -22,7 +22,7 @@ function ajaxSearchMovie(movieName) {
       var uniqueRatingID = "rating-" + i;
 
       $(".movie-title1").text(title);
-      $(".movie-year").text("Released: " + year);
+      $(".movie-year").text("Released:" + year);
 
       var cardDeck = $("<div>").addClass("card-deck");
       var card1 = $("<div>").addClass("card");
@@ -35,7 +35,7 @@ function ajaxSearchMovie(movieName) {
       card1Rating.attr("id", uniqueRatingID);
       var card1Year = $("<p>")
         .addClass("card-text")
-        .text("Released:" + year);
+        .text("Released: " + year);
       var card1footer = $("<div>").addClass("card-footer");
 
       card1body.append(card1Rating, card1Year);
