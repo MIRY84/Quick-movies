@@ -24,27 +24,23 @@ body {
 
 #library {
   display: flex;
-  float: right;
-  margin-right: 100px;
-  position:relative;
+  
   margin-top: 50px;
   margin-bottom: 40px;
   
 }
 
 .card-deck {
-  clear: both;
+ 
   margin: 100px;
 }
 
 #movie-form {
-  align-items: center;
+ 
   display: flex;
-  float: left;
-  margin-left: 80px;
-  padding: 50px;
-  margin-top: 5px;
-  margin-right: 30px;
+  
+  margin-top: 50px;
+ 
 }
 
 .display-4 {

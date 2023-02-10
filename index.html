@@ -13,37 +13,55 @@
   <!--added jumbotron-->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4">QUICK MOVIES</h1>
-      <p class="lead qm-shadow">The fastest way to find out about a movie</p>
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="display-4">QUICK MOVIES</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="lead qm-shadow">The fastest way to find out about a movie</p>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
+
 
 </head>
 
 <body>
   <!--added forms for input and button-->
-  <div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <form id="movie-form">
 
-    <form id="movie-form">
-
-      <input type="text" id="movie-input" placeholder="search movie"><br>
-      <!--ADD BUTTON-->
-      <button id="movie-search" type="button" class="btn btn-primary">Search</button>
-    </form>
-    <!--SHOW LIBRARY BUTTON-->
-
-    <button type="button" id="library" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-      Show library
-    </button>
-
+          <input type="text" id="movie-input" placeholder="search movie"><br>
+          <!--ADD BUTTON-->
+          <button id="movie-search" type="button" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+      <!--SHOW LIBRARY BUTTON-->
+      <div class="col-sm-2">
+        <button type="button" id="library" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+          Show library
+        </button>
+      </div>
+    </div>
   </div>
+       
+      
+      <div id="results">
+      </div>
+      
+      
+      
+      
+     
+     
 
-  <div id="results">
 
-    
 
-  </div>
   <!-- Modal window section -->
   <!-- Button trigger modal -->
 
